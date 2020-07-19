@@ -9,6 +9,9 @@ app.get('/', function (req, res) {
     res.sendFile(__dirname + '/public')
 });
 
-http.listen(5353, function () {
+http.listen(process.env.PORT || 5353, function () {
     console.log(`server started on http://localhost:5353`)
 });
+// server.listen(process.env.PORT || 4545 , () => {
+//     console.log('server started on http://localhost:4545')
+//   });
